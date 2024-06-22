@@ -29,7 +29,7 @@ PORT = os.environ.get("PORT", "8080")
 
 #Database 
 DB_URI = "mongodb+srv://slac:slact@fsub.qnbs3sa.mongodb.net/?retryWrites=true&w=majority&appName=Fsub"
-DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
+DB_NAME = os.environ.get("DATABASE_NAME", "ultroidxTeam")
 
 SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "droplink.co")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "765021bd0f472544de437bba12e050c695e06148")
