@@ -119,7 +119,7 @@ async def start_command(client: Client, message: Message):
                 except:
                     pass
             SD = await message.reply_text("Files will be deleted After 3 hours.")
-            await asyncio.sleep(7200)
+            await asyncio.sleep(60)
 
             for snt_msg in snt_msgs:
                 try:
