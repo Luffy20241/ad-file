@@ -1,5 +1,5 @@
 # --- For-Bot-Working --------- #
-#pyrogram
+pyrogram
 https://github.com/pyrogram/pyrogram/archive/master.zip
 TgCrypto
 pyromod
