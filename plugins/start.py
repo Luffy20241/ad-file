@@ -98,7 +98,7 @@ async def start_command(client: Client, message: Message):
                 await message.reply_text("Something went wrong..!")
                 return
             await temp_msg.delete()
-
+            snt_msgs = []
             for msg in messages:
                 if bool(CUSTOM_CAPTION) & bool(msg.document):
                     caption = CUSTOM_CAPTION.format(previouscaption="" if not msg.caption else msg.caption.html, filename=msg.document.file_name)
@@ -111,11 +111,13 @@ async def start_command(client: Client, message: Message):
                     reply_markup = None
 
                 try:
-                    await msg.copy(chat_id=message.from_user.id, caption=caption, parse_mode=ParseMode.HTML, reply_markup=reply_markup, protect_content=PROTECT_CONTENT)
+                    snt_msg = await msg.copy(chat_id=message.from_user.id, caption=caption, parse_mode=ParseMode.HTML, reply_markup=reply_markup, protect_content=PROTECT_CONTENT)
                     await asyncio.sleep(0.5)
+                    snt_msgs.append(snt_msg)
                 except FloodWait as e:
                     await asyncio.sleep(e.x)
-                    await msg.copy(chat_id=message.from_user.id, caption=caption, parse_mode=ParseMode.HTML, reply_markup=reply_markup, protect_content=PROTECT_CONTENT)
+                    snt_msg = await msg.copy(chat_id=message.from_user.id, caption=caption, parse_mode=ParseMode.HTML, reply_markup=reply_markup, protect_content=PROTECT_CONTENT)
+                    snt_msgs.append(snt_msg)
                 except:
                     pass
             SD = await message.reply_text("Files will be deleted After 3 hours.")
