@@ -1,6 +1,6 @@
 # --- For-Bot-Working --------- #
 #pyrogram
-git+https://github.com/5hojib/pyrogram.git
+https://github.com/pyrogram/pyrogram/archive/master.zip
 TgCrypto
 pyromod
 # --- For-Database ------------ #
