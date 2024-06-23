@@ -31,8 +31,8 @@ PORT = os.environ.get("PORT", "8080")
 DB_URI = "mongodb+srv://slac:slact@fsub.qnbs3sa.mongodb.net/?retryWrites=true&w=majority&appName=Fsub"
 DB_NAME = os.environ.get("DATABASE_NAME", "ultroidxTeam")
 
-SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "0")
-SHORTLINK_API = os.environ.get("SHORTLINK_API", "0")
+SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "modijiurl.com")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "6a8cb4a13e5a7db5a7a314bf925c6935f6ca094f")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
 TUT_VID = os.environ.get("TUT_VID","https://t.me/Realm_Of_Zoro/8")
